@@ -13,7 +13,7 @@ class ApiService {
       "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=85f59a1795b74a29aeec44e1e0388db0";
 
   Future<List<Article>> getArticle() async {
-    Response res = await get(endPointUrl);
+    Response res = await get(Uri.parse(endPointUrl));
     //first of all let's check that we got a 200 statu code: this mean that the request was a succes
 
     if (res.statusCode == 200) {
