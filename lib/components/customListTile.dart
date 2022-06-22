@@ -4,7 +4,7 @@ import '../model/article_model.dart';
 import '../pages/articles_details_page.dart';
 
 Widget customListTile(Article article, BuildContext context) {
-  return InkWell(
+  return article.urlToImage != null ? InkWell(
     onTap: () {
       Navigator.push(
           context,
@@ -70,5 +70,5 @@ Widget customListTile(Article article, BuildContext context) {
         ],
       ),
     ),
-  );
+  ):Text("");
 }
