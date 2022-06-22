@@ -34,9 +34,10 @@ Widget customListTile(Article article, BuildContext context) {
             width: double.infinity,
             decoration: BoxDecoration(
               //let's add the height
-
               image: DecorationImage(
-                  image: NetworkImage(article.urlToImage!), fit: BoxFit.cover),
+                  image: NetworkImage(article.urlToImage ??=
+                      "https://i.ibb.co/rpBSSdd/Featured-How-to-Fix-An-Error-Occurred-While-Loading-a-Higher-Quality-Version-of-This-Photo-on-i-Phon.webp"),
+                  fit: BoxFit.cover),
               borderRadius: BorderRadius.circular(12.0),
             ),
           ),
